@@ -5,28 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        li{
-            color:red;
-        
-        }
-        li:hover{
-            color: blue;
-            text-decoration: none;
-        }
-    </style>
+   
 
 </head>
 <body>
     <h1 style = "background-color: black; color:aliceblue; text-align: center;"> Welcome to gitPub</h1>
-    
-
     <ul>
         <% for(let i=0; i<drinks.length; i++){%>
             <a href="/drinks/<%= i %>"><li><%=drinks[i].name.charAt(0).toUpperCase()+ drinks[i].name.slice(1) %></li></a>
-
         <%}%>
-
     </ul>
 
 
