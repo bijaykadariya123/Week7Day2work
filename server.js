@@ -16,12 +16,12 @@ app.get("/drinks", (req, res)=>{
     res.render("index.ejs",{drinks})
 })
 
-//         // SHOW ROUTE
-// app.get("/drinks/:id", (req, res)=>{
-//     const para = req.params.id
-//     const eledrinks = drinks[para]
-//     res.render("show.ejs",{eledrinks}) 
-// })
+        // SHOW ROUTE
+app.get("/drinks/:id", (req, res)=>{
+    const para = req.params.id
+    res.send(`${para}`)
+
+})
 
 // Listener
 app.listen(port,()=>{
