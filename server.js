@@ -11,10 +11,17 @@ const port = 3000
 app.get("/", (req, res)=>{
     res.send("welcome to the gitpub app")
 })
-
+        //INDEX ROUTE
 app.get("/drinks", (req, res)=>{
-    res.render("index.ejs")
+    res.render("index.ejs",{drinks})
 })
+
+//         // SHOW ROUTE
+// app.get("/drinks/:id", (req, res)=>{
+//     const para = req.params.id
+//     const eledrinks = drinks[para]
+//     res.render("show.ejs",{eledrinks}) 
+// })
 
 // Listener
 app.listen(port,()=>{

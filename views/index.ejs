@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li{
+            color:black;
+        }
+    </style>
 
 </head>
 <body>
     <h1 style = "background-color: black; color:aliceblue; text-align: center;"> Welcome to gitPub</h1>
-    
+    <ul>
+        <% drinks.forEach(function(drink) { %>
+            <li><%= drink.name.charAt(0).toUpperCase()+ drink.name.slice(1) %></li>
+        <% }); %>
+    </ul>
 </body>
 </html>
