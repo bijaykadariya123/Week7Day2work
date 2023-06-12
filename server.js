@@ -19,7 +19,8 @@ app.get("/drinks", (req, res)=>{
         // SHOW ROUTE
 app.get("/drinks/:id", (req, res)=>{
     const para = req.params.id
-    res.send(`${para}`)
+    const eleDrinks = drinks[para]
+    res.render("show.ejs", {eleDrinks, para})
 
 })
 
