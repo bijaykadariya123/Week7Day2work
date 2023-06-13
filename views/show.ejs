@@ -6,20 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        button{
+            font-size: 2em;
+           text-align: center;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color:rgb(101, 93, 93);
+            color: aliceblue;
+            border-radius: 0.4em;
+
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            height: 50em;
+            width: 60em;
+        }
+        h2{
+            text-align: center;
+            color: aliceblue;
+        }
+        h3{
+            text-align: center;
+            color: aliceblue;
+        }
+        body{
+            background-color:black;
+        }
+        h1{
+            background-color: grey !important;
+        }
       
     </style>
 
 </head>
 <body>
     <h1 style = "background-color: black; color:aliceblue; text-align: center;"> At foo bar</h1>
-    <h2>Drink name: <%=(eleDrinks.name.charAt(0).toUpperCase()+eleDrinks.name.slice(1)) %> </h2>
+    <a href="/drinks"><button>Home page</button></a>  
+    <h2>Drink Name: <%=(eleDrinks.name.charAt(0).toUpperCase()+eleDrinks.name.slice(1)) %> </h2>
     <img class="bk" src="<%=eleDrinks.image %>.png" alt="img">
-    <h3>Price: <%= eleDrinks.price%></h3>
-    <a href="/drinks"><button>Home page</button></a>
-
- 
-
-
+    <h3>Price: $<%= eleDrinks.price%>.00</h3>
      
 </body>
 </html>
